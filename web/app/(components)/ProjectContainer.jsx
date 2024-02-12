@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { TbFileSad } from "react-icons/tb";
 import { GoTriangleRight } from "react-icons/go";
+import Image from "next/image";
 
 export default function ProjectContainer({ project }) {
   return (
     <div className="m-auto">
       <div className={"grid grid-cols-4 gap-6 text-white w-full" }>
         <Link href={project.linkTo} className="group border-2 border-white rounded-lg h-48 flex-none">
-          {project.imageSource && <img className="w-full h-full object-cover m-2 rounded-md group-hover:m-0 transition-all" src={project.imageSource} alt={project.name} />}
+          {project.imageSource && <Image className="w-full h-full object-cover m-2 rounded-md group-hover:m-0 transition-all" src={project.imageSource} alt={project.name} />}
           {!project.imageSource && <div className="w-full h-full bg-slate-800 object-cover m-2 rounded-md group-hover:m-0 transition-all text-slate-500 font-bold text-center flex flex-col items-center justify-center text-lg" alt={project.name} >
             <TbFileSad className="w-16 h-16"/>
             Project Image Not Found
