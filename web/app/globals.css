@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #01020E;
+}
+
+.test {
+  animation: scrollAcross 30s linear infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@keyframes scrollAcross {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-51%);
+  }
+}
+
+.container {
+  @apply max-w-screen-2xl m-auto px-24;
+}
